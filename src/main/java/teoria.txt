@@ -1,0 +1,9 @@
+1. add dependencies to pom.xml
+2. add file db.properties with credentials of sql
+    -> url, username and password
+3. create DataSource.java
+    -> create static method getDataSource() -> returns DataSource;
+        -properties
+        -create an object that returns
+        -read a file (db.properties)
+
