@@ -13,9 +13,14 @@ public class ConectorDataSource {
 
         try (FileInputStream fis = new FileInputStream("db.properties")){
             properties.load(fis);
+            mysqlDataSource = new MysqlDataSource();
+            mysqlDataSource.setUrl(properties.getProperty("MYSQL_DB_URL"));
+            mysqlDataSource.setUser(properties.getProperty("MYSQL_DB_USERNAME"));
+//            mysqlDataSource.setPassword(properties.getProperty("MYSQL_DB_PASSWORD"));
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return mysqlDataSource;
     }
 
 }

@@ -1,9 +1,14 @@
 1. add dependencies to pom.xml
 2. add file db.properties with credentials of sql
     -> url, username and password
-3. create DataSource.java
+3. create connector (ConectorDataSource.java)
     -> create static method getDataSource() -> returns DataSource;
         -properties
+            * mysqlDataSource.setUrl(properties.getProperty("MYSQL_DB_URL"));
+                if you not put properties.getProperty() properties is null
+            * if the user has not a password, comment setPassword
         -create an object that returns
         -read a file (db.properties)
+        -put values in dataSource
+4. connection test (Test.java)
 
