@@ -12,3 +12,8 @@
         -put values in dataSource
 4. connection test (Test.java)
 
+//QUESTION
+    -> de donde saco la ruta de la bbdd en properties?
+
+5. create an interfaz and the class that it references -> Usuario getUsuario(int id);
+    - methods crud
