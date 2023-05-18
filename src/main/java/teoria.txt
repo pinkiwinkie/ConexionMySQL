@@ -13,7 +13,9 @@
 4. connection test (Test.java)
 
 //QUESTION
-    -> de donde saco la ruta de la bbdd en properties?
+    -> de donde saco la ruta de la bbdd en properties? -< te las van a dar
 
 5. create an interfaz and the class that it references -> Usuario getUsuario(int id);
     - methods crud
+
+intellij -> educacion -> licencias academicas -> solicitar ahora -> la licencia es de 1 a.
