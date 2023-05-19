@@ -15,7 +15,7 @@
     - methods crud
 6. create database that implements an interface.
     -the code is here
-    -all methods have declared a connection ->   DataSource ds = ConectorDS.getMySQLDataSource();
+    -all methods have declared a connection -> DataSource ds = ConectorDS.getMySQLDataSource();
 
 
 /*difference between statement, preparedStatement and callableStatement*/
@@ -29,9 +29,14 @@
         b. connection.prepareStatement(query) -> inside try()
             -> first prepare the query
             -> to get the information you must create ResultSet that is a cursor.
-            -> then you execute the query or execute update depends on if you want add data or update data at bbdd.
+            -> then you execute the query or execute update depends on if you want to add data or update data at bbdd
             -> while (rs.next()) {code}
-        c.
+    callableStatement:
+        a. if you call a function -> { ? = call authenticate(?,?) } -> the first ? is the value that the function returns
+        b. if you call a procedure -> { call insertarCliente(?,?,?,?,?,?,?,?,?) }
+        c. connection.prepareCall(query)
+        d. callableStatement.setString(1, empleado.getDni()); -> for each ?
+        e. then you execute the query or execute update depends on if you want to add data or update data at bbdd
 
 intellij -> educacion -> licencias academicas -> solicitar ahora -> la licencia es de 1 a.
 //QUESTION
