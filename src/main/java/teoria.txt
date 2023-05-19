@@ -11,9 +11,9 @@
         -read a file (db.properties)
         -put values in dataSource
 4. connection test (Test.java)
-5. create an interfaz and the class that it references -> Usuario getUsuario(int id);
+5. create an interface and the class that it references -> Usuario getUsuario(int id);
     - methods crud
-6. create database that implements an interfaz.
+6. create database that implements an interface.
     -the code is here
     -all methods have declared a connection ->   DataSource ds = ConectorDS.getMySQLDataSource();
 
@@ -21,13 +21,17 @@
 /*difference between statement, preparedStatement and callableStatement*/
     statement:
         a. the query is: "delete from empleado WHERE DNI='" + dni + "';";
-            you put the parameters literal
+           you put the parameters literal
         b. connection.createStatement()
     preparedStatement:
-        a.  the query is: "SELECT * FROM empleado where dni = ?;";
-            you put so many ? as parameters there are
-
-
+        a. the query is: "SELECT * FROM empleado where dni = ?;";
+           you put so many ? as parameters there are
+        b. connection.prepareStatement(query) -> inside try()
+            -> first prepare the query
+            -> to get the information you must create ResultSet that is a cursor.
+            -> then you execute the query or execute update depends on if you want add data or update data at bbdd.
+            -> while (rs.next()) {code}
+        c.
 
 intellij -> educacion -> licencias academicas -> solicitar ahora -> la licencia es de 1 a.
 //QUESTION
