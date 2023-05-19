@@ -11,11 +11,24 @@
         -read a file (db.properties)
         -put values in dataSource
 4. connection test (Test.java)
-
-//QUESTION
-    -> de donde saco la ruta de la bbdd en properties? -< te las van a dar
-
 5. create an interfaz and the class that it references -> Usuario getUsuario(int id);
     - methods crud
+6. create database that implements an interfaz.
+    -the code is here
+    -all methods have declared a connection ->   DataSource ds = ConectorDS.getMySQLDataSource();
+
+
+/*difference between statement, preparedStatement and callableStatement*/
+    statement:
+        a. the query is: "delete from empleado WHERE DNI='" + dni + "';";
+            you put the parameters literal
+        b. connection.createStatement()
+    preparedStatement:
+        a.  the query is: "SELECT * FROM empleado where dni = ?;";
+            you put so many ? as parameters there are
+
+
 
 intellij -> educacion -> licencias academicas -> solicitar ahora -> la licencia es de 1 a.
+//QUESTION
+    -> de donde saco la ruta de la bbdd en properties? ≥ te las van a dar
